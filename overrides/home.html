@@ -1,0 +1,110 @@
+
+  {% extends "main.html" %}
+  {% block tabs %}
+    {{ super() }}
+    <style>.md-header{position:initial}.md-main__inner{margin:0}.md-content{display:none}@media screen and (min-width:60em){.md-sidebar--secondary{display:none}}@media screen and (min-width:76.25em){.md-sidebar--primary{display:none}}</style>
+    <style>
+      #box {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 400px;
+  height: 200px;
+  color: white;
+  font-family: 'Raleway';
+  font-size: 2.5rem;
+}
+.gradient-border {
+  --borderWidth: 3px;
+  background: #1D1F20;
+  position: relative;
+  border-radius: var(--borderWidth);
+}
+.gradient-border:after {
+  content: '';
+  position: absolute;
+  top: calc(-1 * var(--borderWidth));
+  left: calc(-1 * var(--borderWidth));
+  height: calc(100% + var(--borderWidth) * 2);
+  width: calc(100% + var(--borderWidth) * 2);
+  background: linear-gradient(60deg, #f79533, #f37055, #ef4e7b, #a166ab, #5073b8, #1098ad, #07b39b, #6fba82);
+  border-radius: calc(2 * var(--borderWidth));
+  z-index: -1;
+  -webkit-animation: animatedgradient 3s ease alternate infinite;
+          animation: animatedgradient 3s ease alternate infinite;
+  background-size: 300% 300%;
+}
+
+
+@-webkit-keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+
+
+@keyframes animatedgradient {
+	0% {
+		background-position: 0% 50%;
+	}
+	50% {
+		background-position: 100% 50%;
+	}
+	100% {
+		background-position: 0% 50%;
+	}
+}
+    </style>
+    
+    <section class="mdx-container">
+      <div class="md-grid md-typeset">
+        <div class="mdx-hero">
+          
+          <div class="mdx-hero__content">
+            <br>
+            <h1>Discode - the best way to make Discord bots!</h1>
+            <a href="{{ page.next_page.url | url }}" title="{{ page.next_page.title | e }}" class="md-button md-button--primary">
+              Get Started
+            </a>
+            <a href="https://github.com/yetimeh/discode/releases/latest" target="_blank" title="Releases page" class="md-button">
+              Download Discode
+            </a>
+            <br>
+            <br>
+
+            
+            <div style="max-width: fit-content; margin-right: auto; margin-left: auto;" class="gradient-border">
+              <img height="1000px", width="900px" src="images/banner.png" alt="" class="src">
+            </div>
+
+            <h2>About the project</h2>
+
+            <h3>
+              Discode is an open-source node-based discord bot builder created with the sole aim of being as simple as possible.
+              This app is best suited for simple bots, and creating highly complex bots is not advisable. Through a collection of logical and action-based nodes, you 
+              can create simple discord bot logic with no code experience required. The app is simply like a "scratch" for Discord bots, allowing users with no coding
+              experience to have a bot of their own. Feel free to contribute & make sure you leave a ⭐ on the repo if you liked it!
+
+            </h3>
+
+
+            <h2>Concept video: </h2>
+            <div style="max-width: fit-content; margin-right: auto; margin-left: auto;">
+              <iframe width="695" height="380" src="https://www.youtube.com/embed/H8Y8U3d_Mk4" title="Discode - create Discord bots without writing any code | Concept" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+
+            </div>
+            <br>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+  {% endblock %}
+  {% block content %}{% endblock %}
+  {% block footer %}{% endblock %}
